@@ -219,7 +219,7 @@
               <td>Nifunifaz</td>
             </tr>
 
-            <!-- Rondas 3-7 (agregar más rondas aquí) -->
+            <!-- Rondas 3 -->
             <tr>
               <td>Ronda 3</td>
               <td>Alros</td>
@@ -257,249 +257,73 @@
               <td>El Marqués</td>
             </tr>
 
-            <!-- Agrega más rondas aquí hasta completar las 7 rondas -->
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <script>
-      const players = {
-        'Alros': 0,
-        'Lolo': 0,
-        'Tortopulus': 0,
-        'Sarten': 0,
-        'Melkor': 0,
-        'El Marqués': 0,
-        'Lvlaster': 0,
-        'Nifunifaz': 0
-      };
-
-      function updatePoints(winner, loser, isChecked) {
-        if (isChecked) {
-          players[winner] += 3;
-        } else {
-          players[winner] -= 3;
-        }
-        updateRanking();
-      }
-
-      function updateRanking() {
-        const rankingBody = document.getElementById('ranking-body');
-        const sortedPlayers = Object.entries(players).sort((a, b) => b[1] - a[1]);
-        rankingBody.innerHTML = '';
-        sortedPlayers.forEach(([player, points]) => {
-          rankingBody.innerHTML += `<tr><td>${player}</td><td>${points}</td></tr>`;
-        });
-      }
-    </script>
-  </body>
-
-</html>
-<!DOCTYPE html>
-<html lang="es">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Torneo Age of Empires 2 - Fixture</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background-color: #f4f4f4;
-      }
-
-      h1,
-      h2 {
-        text-align: center;
-        color: #333;
-      }
-
-      .rules,
-      .fixture,
-      .ranking {
-        background-color: white;
-        padding: 20px;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .fixture table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-
-      .fixture table,
-      .fixture th,
-      .fixture td {
-        border: 1px solid #ddd;
-      }
-
-      .fixture th,
-      .fixture td {
-        padding: 10px;
-        text-align: center;
-      }
-
-      .columns {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .ranking table {
-        width: 100%;
-        border-collapse: collapse;
-      }
-
-      .ranking table,
-      .ranking th,
-      .ranking td {
-        border: 1px solid #ddd;
-      }
-
-      .ranking th,
-      .ranking td {
-        padding: 10px;
-        text-align: center;
-      }
-    </style>
-  </head>
-
-  <body>
-
-    <h1>Torneo Age of Empires 2 - Definitive Edition</h1>
-
-    <div class="rules">
-      <h2>Reglas del Torneo</h2>
-      <p><strong>Condición de victoria:</strong> Conquista</p>
-      <p><strong>Límite de tiempo:</strong> 1 hora por partida (opcional)</p>
-      <p><strong>Puntuación:</strong></p>
-      <ul>
-        <li>Victoria: 3 puntos</li>
-        <li>Derrota: 0 puntos</li>
-      </ul>
-    </div>
-
-    <div class="ranking">
-      <h2>Clasificación Actual</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Jugador</th>
-            <th>Puntos</th>
-          </tr>
-        </thead>
-        <tbody id="ranking-body">
-          <tr>
-            <td>Alros</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Lolo</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Tortopulus</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Sarten</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Melkor</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>El Marqués</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Lvlaster</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Nifunifaz</td>
-            <td>0</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="fixture">
-      <h2>Fixture - Round Robin</h2>
-      <div class="columns">
-        <table>
-          <thead>
+            <!-- Ronda 4 -->
             <tr>
-              <th>Ronda</th>
-              <th>Jugador 1</th>
-              <th>Ganador</th>
-              <th>Jugador 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Ronda 1 -->
-            <tr>
-              <td>Ronda 1</td>
+              <td>Ronda 4</td>
               <td>Alros</td>
               <td>
-                <input type="checkbox" onclick="updatePoints('Alros', 'Lolo', this.checked)">
-                <input type="checkbox" onclick="updatePoints('Lolo', 'Alros', this.checked)">
-              </td>
-              <td>Lolo</td>
-            </tr>
-            <tr>
-              <td>Ronda 1</td>
-              <td>Tortopulus</td>
-              <td>
-                <input type="checkbox" onclick="updatePoints('Tortopulus', 'Sarten', this.checked)">
-                <input type="checkbox" onclick="updatePoints('Sarten', 'Tortopulus', this.checked)">
+                <input type="checkbox" onclick="updatePoints('Alros', 'Sarten', this.checked)">
+                <input type="checkbox" onclick="updatePoints('Sarten', 'Alros', this.checked)">
               </td>
               <td>Sarten</td>
             </tr>
             <tr>
-              <td>Ronda 1</td>
-              <td>Melkor</td>
+              <td>Ronda 4</td>
+              <td>Lolo</td>
               <td>
-                <input type="checkbox" onclick="updatePoints('Melkor', 'El Marqués', this.checked)">
-                <input type="checkbox" onclick="updatePoints('El Marqués', 'Melkor', this.checked)">
+                <input type="checkbox" onclick="updatePoints('Lolo', 'Nifunifaz', this.checked)">
+                <input type="checkbox" onclick="updatePoints('Nifunifaz', 'Lolo', this.checked)">
+              </td>
+              <td>Nifunifaz</td>
+            </tr>
+            <tr>
+              <td>Ronda 4</td>
+              <td>Tortopulus </td>
+              <td>
+                <input type="checkbox" onclick="updatePoints('Tortopulus', 'Lvlaster', this.checked)">
+                <input type="checkbox" onclick="updatePoints('Lvlaster', 'Tortopulus', this.checked)">
+              </td>
+              <td>Lvlaster</td>
+            </tr>
+            <tr>
+              <td>Ronda 4</td>
+              <td>Melkor </td>
+              <td>
+                <input type="checkbox" onclick="updatePoints('Melkor ', 'El Marqués', this.checked)">
+                <input type="checkbox" onclick="updatePoints('El Marqués', 'Melkor ', this.checked)">
+              </td>
+              <td>El Marqués</td>
+            </tr>
+            <!-- Ronda 5 -->
+            <tr>
+              <td>Ronda 5</td>
+              <td>Alros</td>
+              <td>
+                <input type="checkbox" onclick="updatePoints('Alros', 'Nifunifaz', this.checked)">
+                <input type="checkbox" onclick="updatePoints('Nifunifaz', 'Alros', this.checked)">
+              </td>
+              <td>Nifunifaz</td>
+            </tr>
+            <tr>
+              <td>Ronda 5</td>
+              <td>Lolo</td>
+              <td>
+                <input type="checkbox" onclick="updatePoints('Lolo', 'El Marqués', this.checked)">
+                <input type="checkbox" onclick="updatePoints('El Marqués', 'Lolo', this.checked)">
               </td>
               <td>El Marqués</td>
             </tr>
             <tr>
-              <td>Ronda 1</td>
-              <td>Lvlaster</td>
-              <td>
-                <input type="checkbox" onclick="updatePoints('Lvlaster', 'Nifunifaz', this.checked)">
-                <input type="checkbox" onclick="updatePoints('Nifunifaz', 'Lvlaster', this.checked)">
-              </td>
-              <td>Nifunifaz</td>
-            </tr>
-
-            <!-- Ronda 2 -->
-            <tr>
-              <td>Ronda 2</td>
-              <td>Alros</td>
-              <td>
-                <input type="checkbox" onclick="updatePoints('Alros', 'Tortopulus', this.checked)">
-                <input type="checkbox" onclick="updatePoints('Tortopulus', 'Alros', this.checked)">
-              </td>
+              <td>Ronda 5</td>
               <td>Tortopulus</td>
-            </tr>
-            <tr>
-              <td>Ronda 2</td>
-              <td>Lolo</td>
               <td>
-                <input type="checkbox" onclick="updatePoints('Lolo', 'Melkor', this.checked)">
-                <input type="checkbox" onclick="updatePoints('Melkor', 'Lolo', this.checked)">
+                <input type="checkbox" onclick="updatePoints('Tortopulus', 'Melkor', this.checked)">
+                <input type="checkbox" onclick="updatePoints('Melkor', 'Tortopulus', this.checked)">
               </td>
               <td>Melkor</td>
             </tr>
             <tr>
-              <td>Ronda 2</td>
+              <td>Ronda 5</td>
               <td>Sarten</td>
               <td>
                 <input type="checkbox" onclick="updatePoints('Sarten', 'Lvlaster', this.checked)">
@@ -507,28 +331,18 @@
               </td>
               <td>Lvlaster</td>
             </tr>
+            <!-- Ronda 6 -->
             <tr>
-              <td>Ronda 2</td>
-              <td>El Marqués</td>
-              <td>
-                <input type="checkbox" onclick="updatePoints('El Marqués', 'Nifunifaz', this.checked)">
-                <input type="checkbox" onclick="updatePoints('Nifunifaz', 'El Marqués', this.checked)">
-              </td>
-              <td>Nifunifaz</td>
-            </tr>
-
-            <!-- Rondas 3-7 (agregar más rondas aquí) -->
-            <tr>
-              <td>Ronda 3</td>
+              <td>Ronda 6</td>
               <td>Alros</td>
               <td>
-                <input type="checkbox" onclick="updatePoints('Alros', 'Melkor', this.checked)">
-                <input type="checkbox" onclick="updatePoints('Melkor', 'Alros', this.checked)">
+                <input type="checkbox" onclick="updatePoints('Alros', 'Lvlaster', this.checked)">
+                <input type="checkbox" onclick="updatePoints('Lvlaster', 'Alros', this.checked)">
               </td>
-              <td>Melkor</td>
+              <td>Lvlaster</td>
             </tr>
             <tr>
-              <td>Ronda 3</td>
+              <td>Ronda 6</td>
               <td>Lolo</td>
               <td>
                 <input type="checkbox" onclick="updatePoints('Lolo', 'Tortopulus', this.checked)">
@@ -537,7 +351,7 @@
               <td>Tortopulus</td>
             </tr>
             <tr>
-              <td>Ronda 3</td>
+              <td>Ronda 6</td>
               <td>Sarten</td>
               <td>
                 <input type="checkbox" onclick="updatePoints('Sarten', 'Nifunifaz', this.checked)">
@@ -546,16 +360,51 @@
               <td>Nifunifaz</td>
             </tr>
             <tr>
-              <td>Ronda 3</td>
-              <td>Lvlaster</td>
+              <td>Ronda 6</td>
+              <td>Melkor</td>
               <td>
-                <input type="checkbox" onclick="updatePoints('Lvlaster', 'El Marqués', this.checked)">
-                <input type="checkbox" onclick="updatePoints('El Marqués', 'Lvlaster', this.checked)">
+                <input type="checkbox" onclick="updatePoints('Melkor', 'El Marqués', this.checked)">
+                <input type="checkbox" onclick="updatePoints('El Marqués', 'Melkor', this.checked)">
               </td>
               <td>El Marqués</td>
             </tr>
-
-            <!-- Agrega más rondas aquí hasta completar las 7 rondas -->
+            <!-- Ronda 7 -->
+            <tr>
+              <td>Ronda 7</td>
+              <td>Alros</td>
+              <td>
+                <input type="checkbox" onclick="updatePoints('Alros', 'El Marqués', this.checked)">
+                <input type="checkbox" onclick="updatePoints('El Marqués', 'Alros', this.checked)">
+              </td>
+              <td>El Marqués</td>
+            </tr>
+            <tr>
+              <td>Ronda 7</td>
+              <td>Lolo</td>
+              <td>
+                <input type="checkbox" onclick="updatePoints('Lolo', 'Sarten', this.checked)">
+                <input type="checkbox" onclick="updatePoints('Sarten', 'Lolo', this.checked)">
+              </td>
+              <td>Sarten</td>
+            </tr>
+            <tr>
+              <td>Ronda 7</td>
+              <td>Tortopulus</td>
+              <td>
+                <input type="checkbox" onclick="updatePoints('Tortopulus', 'Nifunifaz', this.checked)">
+                <input type="checkbox" onclick="updatePoints('Nifunifaz', 'Tortopulus', this.checked)">
+              </td>
+              <td>Nifunifaz</td>
+            </tr>
+            <tr>
+              <td>Ronda 7</td>
+              <td>Melkor </td>
+              <td>
+                <input type="checkbox" onclick="updatePoints('Melkor ', 'Lvlaster', this.checked)">
+                <input type="checkbox" onclick="updatePoints('Lvlaster', 'Melkor ', this.checked)">
+              </td>
+              <td>Lvlaster</td>
+            </tr>
           </tbody>
         </table>
       </div>
