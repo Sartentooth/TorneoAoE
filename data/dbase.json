@@ -1,0 +1,128 @@
+{
+  "jugadores": {
+    "Alros": {
+      "puntos": 0
+    },
+    "Lolo": {
+      "puntos": 0
+    },
+    "Tortopulus": {
+      "puntos": 0
+    },
+    "Sarten": {
+      "puntos": 0
+    },
+    "Melkor": {
+      "puntos": 0
+    },
+    "El Marqués": {
+      "puntos": 0
+    },
+    "Lvlaster": {
+      "puntos": 0
+    },
+    "Nifunifaz": {
+      "puntos": 0
+    }
+  },
+  "partidas": {
+    "ronda1": {
+      "Alros_vs_Lolo": {
+        "ganador": ""
+      },
+      "Tortopulus_vs_Sarten": {
+        "ganador": ""
+      },
+      "Melkor_vs_El Marqués": {
+        "ganador": ""
+      },
+      "Lvlaster_vs_Nifunifaz": {
+        "ganador": ""
+      }
+    },
+    "ronda2": {
+      "Alros_vs_Tortopulus": {
+        "ganador": ""
+      },
+      "Lolo_vs_Melkor": {
+        "ganador": ""
+      },
+      "Sarten_vs_Lvlaster": {
+        "ganador": ""
+      },
+      "El Marqués_vs_Nifunifaz": {
+        "ganador": ""
+      }
+    },
+    "ronda3": {
+      "Alros_vs_Melkor": {
+        "ganador": ""
+      },
+      "Lolo_vs_Sarten": {
+        "ganador": ""
+      },
+      "Tortopulus_vs_El Marqués": {
+        "ganador": ""
+      },
+      "Lvlaster_vs_Nifunifaz": {
+        "ganador": ""
+      }
+    },
+    "ronda4": {
+      "Alros_vs_Sarten": {
+        "ganador": ""
+      },
+      "Lolo_vs_Nifunifaz": {
+        "ganador": ""
+      },
+      "Tortopulus_vs_Lvlaster": {
+        "ganador": ""
+      },
+      "Melkor_vs_El Marqués": {
+        "ganador": ""
+      }
+    },
+    "ronda5": {
+      "Alros_vs_Nifunifaz": {
+        "ganador": ""
+      },
+      "Lolo_vs_El Marqués": {
+        "ganador": ""
+      },
+      "Tortopulus_vs_Melkor": {
+        "ganador": ""
+      },
+      "Sarten_vs_Lvlaster": {
+        "ganador": ""
+      }
+    },
+    "ronda6": {
+      "Alros_vs_Lvlaster": {
+        "ganador": ""
+      },
+      "Lolo_vs_Tortopulus": {
+        "ganador": ""
+      },
+      "Sarten_vs_Nifunifaz": {
+        "ganador": ""
+      },
+      "Melkor_vs_El Marqués": {
+        "ganador": ""
+      }
+    },
+    "ronda7": {
+      "Alros_vs_El Marqués": {
+        "ganador": ""
+      },
+      "Lolo_vs_Sarten": {
+        "ganador": ""
+      },
+      "Tortopulus_vs_Nifunifaz": {
+        "ganador": ""
+      },
+      "Melkor_vs_Lvlaster": {
+        "ganador": ""
+      }
+    }
+  }
+}
