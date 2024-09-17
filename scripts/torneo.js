@@ -34,7 +34,6 @@ function updateRanking() {
   sortedPlayers.forEach(([player, points], index) => {
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>${index + 1}</td>
       <td>${player}</td>
       <td>${points}</td>
     `;
