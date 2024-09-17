@@ -1,50 +1,51 @@
 // Variable global para almacenar los datos del torneo
 let torneoData;
-const db = 'https://raw.githubusercontent.com/Sartentooth/TorneoAoE/refs/heads/main/data/dbase.json';
+const db = "data/dbase.json";
 
 // Cargar los datos del JSON
 async function cargarDatos() {
-    try {
-        const response = await fetch(db);
-        torneoData = await response.json();
-        consolo.log(...db);
-        actualizarClasificacion();
-        actualizarFixture();
-    } catch (error) {
-        console.error('Error al cargar los datos:', error);
-    }
+  try {
+    const response = await fetch(db);
+    torneoData = await response.json();
+    console.log(...db);
+    actualizarClasificacion();
+    actualizarFixture();
+  } catch (error) {
+    console.error("Error al cargar los datos:", error);
+  }
 }
 
 // Actualizar la tabla de clasificación
 function actualizarClasificacion() {
-    const tbody = document.querySelector('#clasificacion tbody');
-    tbody.innerHTML = '';
+  const tbody = document.querySelector("#clasificacion tbody");
+  tbody.innerHTML = "";
 
-    // Ordenar jugadores por puntos
-    const jugadoresOrdenados = Object.entries(torneoData.jugadores)
-        .sort((a, b) => b[1].puntos - a[1].puntos);
+  // Ordenar jugadores por puntos
+  const jugadoresOrdenados = Object.entries(torneoData.jugadores).sort(
+    (a, b) => b[1].puntos - a[1].puntos
+  );
 
-    jugadoresOrdenados.forEach((jugador, index) => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
+  jugadoresOrdenados.forEach((jugador, index) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
             <td>${index + 1}</td>
             <td>${jugador[0]}</td>
             <td>${jugador[1].puntos}</td>
         `;
-        tbody.appendChild(tr);
-    });
+    tbody.appendChild(tr);
+  });
 }
 
 // Actualizar la tabla de fixture
 function actualizarFixture() {
-    const tbody = document.querySelector('#fixture tbody');
-    tbody.innerHTML = '';
+  const tbody = document.querySelector("#fixture tbody");
+  tbody.innerHTML = "";
 
-    Object.entries(torneoData.partidas).forEach(([ronda, partidas]) => {
-        Object.entries(partidas).forEach(([partida, datos]) => {
-            const [jugador1, jugador2] = partida.split('_vs_');
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
+  Object.entries(torneoData.partidas).forEach(([ronda, partidas]) => {
+    Object.entries(partidas).forEach(([partida, datos]) => {
+      const [jugador1, jugador2] = partida.split("_vs_");
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
                 <td>${ronda}</td>
                 <td>${jugador1}</td>
                 <td>
@@ -59,33 +60,35 @@ function actualizarFixture() {
                 </td>
                 <td>${jugador2}</td>
             `;
-            tbody.appendChild(tr);
-        });
+      tbody.appendChild(tr);
     });
+  });
 }
 
 // Actualizar resultado de una partida
 function actualizarResultado(ronda, partida, ganador, checked) {
-    const [jugador1, jugador2] = partida.split('_vs_');
-    const perdedor = jugador1 === ganador ? jugador2 : jugador1;
+  const [jugador1, jugador2] = partida.split("_vs_");
+  const perdedor = jugador1 === ganador ? jugador2 : jugador1;
 
-    // Actualizar puntos
-    if (checked) {
-        torneoData.jugadores[ganador].puntos += 3;
-        torneoData.partidas[ronda][partida].ganador = ganador;
-    } else {
-        torneoData.jugadores[ganador].puntos -= 3;
-        torneoData.partidas[ronda][partida].ganador = "";
-    }
+  // Actualizar puntos
+  if (checked) {
+    torneoData.jugadores[ganador].puntos += 3;
+    torneoData.partidas[ronda][partida].ganador = ganador;
+  } else {
+    torneoData.jugadores[ganador].puntos -= 3;
+    torneoData.partidas[ronda][partida].ganador = "";
+  }
 
-    // Asegurar que solo un checkbox esté marcado
-    const checkboxes = document.querySelectorAll(`input[type="checkbox"][onchange^="actualizarResultado('${ronda}', '${partida}')"]`);
-    checkboxes.forEach(cb => {
-        if (cb !== event.target) cb.checked = false;
-    });
+  // Asegurar que solo un checkbox esté marcado
+  const checkboxes = document.querySelectorAll(
+    `input[type="checkbox"][onchange^="actualizarResultado('${ronda}', '${partida}')"]`
+  );
+  checkboxes.forEach((cb) => {
+    if (cb !== event.target) cb.checked = false;
+  });
 
-    actualizarClasificacion();
+  actualizarClasificacion();
 }
 
 // Inicializar la aplicación
-document.addEventListener('DOMContentLoaded', cargarDatos);
+document.addEventListener("DOMContentLoaded", cargarDatos);
