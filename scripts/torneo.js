@@ -23,7 +23,7 @@ function guardarResultado(winner, loser, isChecked) {
 
 // Función para actualizar el ranking en la tabla
 function updateRanking() {
-  const rankingBody = document.getElementById("ranking-body");
+  const rankingBody = document.getElementById("ranking");
   const sortedPlayers = Object.entries(players).sort((a, b) => b[1] - a[1]);
   rankingBody.innerHTML = "";
   sortedPlayers.forEach(([player, points]) => {
