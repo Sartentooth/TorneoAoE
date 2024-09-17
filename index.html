@@ -7,10 +7,10 @@
     <title>Torneo Age of Empires 2 - Definitive Edition</title>
     
     <link rel="stylesheet" href="styles/torneo-styles.css">
-  </head>
-
-  <body>
-     <h1>Torneo Age of Empires 2 - Definitive Edition</h1>
+    <script src="torneo.js"></script>
+</head>
+<body>
+    <h1>Torneo Age of Empires 2 - Definitive Edition</h1>
 
     <div class="section rules">
         <h2>Reglas del Torneo</h2>
@@ -42,8 +42,53 @@
         </table>
     </div>
 
+    <div class="section fixture">
+        <h2>Fixture - Round Robin</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ronda</th>
+                    <th>Jugador 1</th>
+                    <th>Ganador</th>
+                    <th>Jugador 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ronda 1</td>
+                    <td>Alros</td>
+                    <td><input type="checkbox" onchange="guardarResultado('Alros', 'Lolo', this.checked)"></td>
+                    <td>Lolo</td>
+                </tr>
+                <tr>
+                    <td>Ronda 1</td>
+                    <td>Tortopulus</td>
+                    <td><input type="checkbox" onchange="guardarResultado('Tortopulus', 'Sarten', this.checked)"></td>
+                    <td>Sarten</td>
+                </tr>
+                <tr>
+                    <td>Ronda 1</td>
+                    <td>Melkor</td>
+                    <td><input type="checkbox" onchange="guardarResultado('Melkor', 'El Marqués', this.checked)"></td>
+                    <td>El Marqués</td>
+                </tr>
+                <tr>
+                    <td>Ronda 1</td>
+                    <td>Lvlaster</td>
+                    <td><input type="checkbox" onchange="guardarResultado('Lvlaster', 'Nifunifaz', this.checked)"></td>
+                    <td>Nifunifaz</td>
+                </tr>
+                <!-- Continúa con el resto de las rondas -->
+            </tbody>
+        </table>
+    </div>
 
-    <section class="fixture">
+    <div id="mensaje"></div>
+</body>
+</html>
+
+<!-- 
+<section class="fixture">
       <h2>Fixture - Round Robin</h2>
       <div class="columns">
         <table>
@@ -56,7 +101,7 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Ronda 1 -->
+         
             <tr>
               <td>Ronda 1</td>
               <td>Alros</td>
@@ -96,7 +141,7 @@
             </td>
             <td>Nifunifaz</td>
             </tr>
-            <!-- Ronda 2 -->
+        
             <tr>
               <td>Ronda 2</td>
               <td>Alros</td>
@@ -135,7 +180,7 @@
               <td>Nifunifaz</td>
             </tr>
 
-            <!-- Rondas 3 -->
+   
             <tr>
               <td>Ronda 3</td>
               <td>Alros</td>
@@ -171,7 +216,7 @@
               </td>
               <td>ronda4</td>
             </tr>
-            <!-- Ronda 4 -->
+   
             <tr>
               <td>Ronda 4</td>
               <td>Alros</td>
@@ -208,7 +253,7 @@
               </td>
               <td>El Marqués</td>
             </tr>
-            <!-- Ronda 5 -->
+      
             <tr>
               <td>Ronda 5</td>
               <td>Alros</td>
@@ -245,7 +290,7 @@
               </td>
               <td>Lvlaster</td>
             </tr>
-            <!-- Ronda 6 -->
+  
             <tr>
               <td>Ronda 6</td>
               <td>Alros</td>
@@ -282,7 +327,7 @@
               </td>
               <td>El Marqués</td>
             </tr>
-            <!-- Ronda 7 -->
+
             <tr>
               <td>Ronda 7</td>
               <td>Alros</td>
@@ -322,10 +367,4 @@
           </tbody>
         </table>
       </div>
-    </section>
-    <div id="mensaje"></div>
-
-    <script src="scripts/torneo.js"></script>
-  </body>
-
-</html>
+    </section> -->
