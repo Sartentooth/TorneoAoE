@@ -7,6 +7,7 @@ async function cargarDatos() {
     try {
         const response = await fetch(db);
         torneoData = await response.json();
+        consolo.log(...db);
         actualizarClasificacion();
         actualizarFixture();
     } catch (error) {
