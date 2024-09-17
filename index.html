@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torneo Age of Empires 2 - Definitive Edition</title>
-    
-    <link rel="stylesheet" href="styles/torneo-styles.css">
-    <script src="torneo.js"></script>
+    <link rel="stylesheet" href="torneo-styles.css">
+    <script src="torneo.js" defer></script>
 </head>
 <body>
     <h1>Torneo Age of Empires 2 - Definitive Edition</h1>
 
-    <div class="section rules">
+    <!-- Sección de reglas (sin cambios) -->
+    <section class="rules">
         <h2>Reglas del Torneo</h2>
         <ul>
             <li><strong>Condición de victoria:</strong> Conquista</li>
@@ -24,11 +23,12 @@
                 </ul>
             </li>
         </ul>
-    </div>
+    </section>
 
-    <div class="section ranking">
+    <!-- Sección de clasificación -->
+    <section class="ranking">
         <h2>Clasificación Actual</h2>
-        <table>
+        <table id="clasificacion">
             <thead>
                 <tr>
                     <th>Posición</th>
@@ -37,14 +37,15 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Aquí se insertarán las filas dinámicamente -->
+                <!-- Se llenará dinámicamente con JavaScript -->
             </tbody>
         </table>
-    </div>
+    </section>
 
-    <div class="section fixture">
+    <!-- Sección de fixture -->
+    <section class="fixture">
         <h2>Fixture - Round Robin</h2>
-        <table>
+        <table id="fixture">
             <thead>
                 <tr>
                     <th>Ronda</th>
@@ -54,34 +55,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Ronda 1</td>
-                    <td>Alros</td>
-                    <td><input type="checkbox" onchange="guardarResultado('Alros', 'Lolo', this.checked)"></td>
-                    <td>Lolo</td>
-                </tr>
-                <tr>
-                    <td>Ronda 1</td>
-                    <td>Tortopulus</td>
-                    <td><input type="checkbox" onchange="guardarResultado('Tortopulus', 'Sarten', this.checked)"></td>
-                    <td>Sarten</td>
-                </tr>
-                <tr>
-                    <td>Ronda 1</td>
-                    <td>Melkor</td>
-                    <td><input type="checkbox" onchange="guardarResultado('Melkor', 'El Marqués', this.checked)"></td>
-                    <td>El Marqués</td>
-                </tr>
-                <tr>
-                    <td>Ronda 1</td>
-                    <td>Lvlaster</td>
-                    <td><input type="checkbox" onchange="guardarResultado('Lvlaster', 'Nifunifaz', this.checked)"></td>
-                    <td>Nifunifaz</td>
-                </tr>
-                <!-- Continúa con el resto de las rondas -->
+                <!-- Se llenará dinámicamente con JavaScript -->
             </tbody>
         </table>
-    </div>
+    </section>
 
     <div id="mensaje"></div>
 </body>
