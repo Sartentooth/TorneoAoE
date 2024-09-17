@@ -1,10 +1,11 @@
 // Variable global para almacenar los datos del torneo
 let torneoData;
+const db = 'https://raw.githubusercontent.com/Sartentooth/TorneoAoE/refs/heads/main/data/dbase.json';
 
 // Cargar los datos del JSON
 async function cargarDatos() {
     try {
-        const response = await fetch('dbase.json');
+        const response = await fetch(db);
         torneoData = await response.json();
         actualizarClasificacion();
         actualizarFixture();
