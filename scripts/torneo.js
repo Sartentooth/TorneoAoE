@@ -23,11 +23,22 @@ function guardarResultado(winner, loser, isChecked) {
 
 // Función para actualizar el ranking en la tabla
 function updateRanking() {
-  const rankingBody = document.getElementById("ranking");
+  const rankingBody = document.querySelector('.ranking table tbody');
+  if (!rankingBody) {
+    console.error('No se encontró el cuerpo de la tabla de ranking');
+    return;
+  }
+
   const sortedPlayers = Object.entries(players).sort((a, b) => b[1] - a[1]);
   rankingBody.innerHTML = "";
-  sortedPlayers.forEach(([player, points]) => {
-    rankingBody.innerHTML += `<tr><td>${player}</td><td>${points}</td></tr>`;
+  sortedPlayers.forEach(([player, points], index) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${index + 1}</td>
+      <td>${player}</td>
+      <td>${points}</td>
+    `;
+    rankingBody.appendChild(row);
   });
 }
 
