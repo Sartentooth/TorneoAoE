@@ -1,3 +1,15 @@
+/ Cargar los puntos desde el localStorage, si existen
+let players = JSON.parse(localStorage.getItem("players")) || {
+  Alros: 0,
+  Lolo: 0,
+  Tortopulus: 0,
+  Sarten: 0,
+  Melkor: 0,
+  "El Marqués": 0,
+  Lvlaster: 0,
+  Nifunifaz: 0,
+};
+
 // Función para actualizar los puntos y guardarlos en localStorage
 function guardarResultado(winner, loser, winnerCheckbox, loserCheckbox) {
   if (winnerCheckbox.checked && !loserCheckbox.checked) {
