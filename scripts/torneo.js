@@ -5,7 +5,7 @@ const players = JSON.parse(localStorage.getItem("players")) || {
   Tortopulus: 0,
   Sarten: 0,
   Melkor: 0,
-  El_Marqués: 0,
+  "Marqués": 0,
   Lvlaster: 0,
   Nifunifaz: 0,
 };
