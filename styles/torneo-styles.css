@@ -72,7 +72,7 @@ label {
 
 /* Estilos para la sección de reglas con logo */
 .rules {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.276)40%), url('images/logo.jpg');
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.276)40%), url('https://raw.githubusercontent.com/Sartentooth/TorneoAoE/main/images/logo.jpg');
     background-size: cover;
     background-position: right center;
     background-repeat: no-repeat;
