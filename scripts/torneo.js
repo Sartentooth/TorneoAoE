@@ -1,5 +1,5 @@
 // Variable global para almacenar los datos del torneo
-const torneoData = "";
+let torneoData;
 const db = "data/dbase.json";
 
 // Cargar los datos del JSON
