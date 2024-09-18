@@ -4,15 +4,29 @@ const db = "data/dbase.json";
 
 // Cargar los datos del JSON
 async function cargarDatos() {
-  try {
-    const response = await fetch(db);
-    torneoData = await response.json();
-    console.log(torneoData.jugadores);
-    actualizarClasificacion();
-    actualizarFixture();
-  } catch (error) {
-    console.error("Error al cargar los datos:", error);
+  // Carga datos desde localStorage, sino hay, carga desde db.json
+  const datosGuardados = localStorage.getItem("torneoData");
+
+  if (datosGuardados) {
+    torneoData = JSON.parse(datosGuardados);
+    console.log("Datos cargados desde localStorage");
+  } else {
+    try {
+      const response = await fetch(db);
+      torneoData = await response.json();
+      console.log(torneoData.jugadores);
+    } catch (error) {
+      console.error("Error al cargar los datos:", error);
+    }
   }
+
+  actualizarClasificacion();
+  actualizarFixture();
+}
+
+// Guardar datos en localStorage al actualizar la clasificación
+function guardarDatosLocal() {
+  localStorage.setItem("toneroData", JSON.stringify(torneoData));
 }
 
 // Actualizar la tabla de clasificación
@@ -34,6 +48,9 @@ function actualizarClasificacion() {
         `;
     tbody.appendChild(tr);
   });
+
+  // guardar los datos en localStorage
+  guardarDatosLocal();
 }
 
 // Actualizar la tabla de fixture
