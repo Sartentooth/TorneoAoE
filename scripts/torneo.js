@@ -7,7 +7,7 @@ async function cargarDatos() {
   try {
     const response = await fetch(db);
     torneoData = await response.json();
-    console.log(...db);
+    console.log(torneoData.jugadores);
     actualizarClasificacion();
     actualizarFixture();
   } catch (error) {
@@ -48,15 +48,19 @@ function actualizarFixture() {
       tr.innerHTML = `
                 <td>${ronda}</td>
                 <td>${jugador1}</td>
-                <td>
-                    <label class="custom-checkbox">
+                <td class="ganador-col">
+                <div class="checkbox-group">    
+                <label class="custom-checkbox">
                         <input type="checkbox" onchange="actualizarResultado('${ronda}', '${partida}', '${jugador1}', this.checked)">
                         <span class="checkmark"></span>
                     </label>
+                    </td>
+                    <td class="ganador-col">
                     <label class="custom-checkbox">
                         <input type="checkbox" onchange="actualizarResultado('${ronda}', '${partida}', '${jugador2}', this.checked)">
                         <span class="checkmark"></span>
                     </label>
+                    </div>
                 </td>
                 <td>${jugador2}</td>
             `;
