@@ -1,5 +1,5 @@
 // Variable global para almacenar los datos del torneo
-let torneoData;
+const torneoData = "";
 const db = "data/dbase.json";
 
 // Cargar los datos del JSON
@@ -105,7 +105,7 @@ function actualizarResultado(ronda, partida, ganador, checked) {
     `input[type="checkbox"][onchange^="actualizarResultado('${ronda}', '${partida}')"]`
   );
   checkboxes.forEach((cb) => {
-    if (cb !== event.target) cb.checked = false;
+    if (cb !== e.target) cb.checked = false;
   });
 
   actualizarClasificacion();
