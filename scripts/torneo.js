@@ -2,31 +2,36 @@
 let torneoData;
 const db = "data/dbase.json";
 
-// Cargar los datos del JSON
-async function cargarDatos() {
-  // Carga datos desde localStorage, sino hay, carga desde db.json
+// obtener los datos del localStorage. Si existen, los convierte de string a objeto       JavaScript y los devuelve
+function cargarDatosLocalStorage() {
   const datosGuardados = localStorage.getItem("torneoData");
-
   if (datosGuardados) {
-    torneoData = JSON.parse(datosGuardados);
-    console.log("Datos cargados desde localStorage");
-  } else {
-    try {
-      const response = await fetch(db);
-      torneoData = await response.json();
-      console.log(torneoData.jugadores);
-    } catch (error) {
-      console.error("Error al cargar los datos:", error);
-    }
+    return JSON.parse(datosGuardados);
   }
-
-  actualizarClasificacion();
-  actualizarFixture();
+  return null;
 }
 
-// Guardar datos en localStorage al actualizar la clasificación
-function guardarDatosLocal() {
-  localStorage.setItem("toneroData", JSON.stringify(torneoData));
+// guardar en localStorage
+function guardarDatosLocalStorage() {
+  localStorage.setItem("torneoData", JSON.stringify(torneoData));
+}
+
+// Cargar los datos del JSON
+async function cargarDatos() {
+  try {
+    const datosLocales = cargarDatosLocalStorage();
+    if (datosLocales) {
+      torneoData = datosLocales;
+    } else {
+      const response = await fetch(db);
+      torneoData = await response.json();
+    }
+    console.log(torneoData.jugadores);
+    actualizarClasificacion();
+    actualizarFixture();
+  } catch (error) {
+    console.error("Error al cargar los datos:", error);
+  }
 }
 
 // Actualizar la tabla de clasificación
@@ -48,9 +53,6 @@ function actualizarClasificacion() {
         `;
     tbody.appendChild(tr);
   });
-
-  // guardar los datos en localStorage
-  guardarDatosLocal();
 }
 
 // Actualizar la tabla de fixture
@@ -109,6 +111,7 @@ function actualizarResultado(ronda, partida, ganador, checked) {
   });
 
   actualizarClasificacion();
+  guardarDatosLocalStorage();
 }
 
 // Inicializar la aplicación
