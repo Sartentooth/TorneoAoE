@@ -69,17 +69,17 @@ function actualizarFixture() {
                 <td>${jugador1}</td>
                 <td class="ganador-col">
                 <div class="checkbox-group">    
-                <label class="custom-checkbox">
-                        <input type="checkbox" onchange="actualizarResultado('${ronda}', '${partida}', '${jugador1}', this.checked)">
-                        <span class="checkmark"></span>
-                    </label>
-                    </td>
-                    <td class="ganador-col">
+                  <label class="custom-checkbox">
+                      <input type="checkbox" onchange="actualizarResultado('${ronda}', '${partida}', '${jugador1}', this.checked)">
+                      <span class="checkmark"></span>
+                  </label>
+                </td>
+                <td class="ganador-col2">
                     <label class="custom-checkbox">
                         <input type="checkbox" onchange="actualizarResultado('${ronda}', '${partida}', '${jugador2}', this.checked)">
                         <span class="checkmark"></span>
                     </label>
-                    </div>
+                </div>
                 </td>
                 <td>${jugador2}</td>
             `;

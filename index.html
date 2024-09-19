@@ -7,6 +7,7 @@
     <title>Torneo Age of Empires 2 - Definitive Edition</title>
     <link rel="stylesheet" href="styles/torneo-styles.css">
     <script src="scripts/torneo.js" defer></script>
+    <script src="scripts/cleanLocalStorage.js" defer></script>
   </head>
 
   <body>
@@ -44,6 +45,10 @@
       </table>
     </section>
 
+    <div class="contenedor">
+      <button class="cleanAll" type="button" onclick="cleanLocalStorage()" aria-label="Limpiar localStorage">🧹</button>
+    </div>
+
     <!-- Sección de fixture -->
     <section class="fixture">
       <h2>Fixture - Round Robin</h2>
@@ -51,9 +56,9 @@
         <thead>
           <tr>
             <th>Ronda</th>
-            <th>Jugador 1</th>
+            <th class="th-col">Jugador 1</th>
             <th class="ganador-col" colspan="2">Ganador</th>
-            <th>Jugador 2</th>
+            <th class="th-col">Jugador 2</th>
           </tr>
         </thead>
         <tbody>
@@ -66,285 +71,3 @@
   </body>
 
 </html>
-
-<!-- 
-<section class="fixture">
-      <h2>Fixture - Round Robin</h2>
-      <div class="columns">
-        <table>
-          <thead>
-            <tr>
-              <th>Ronda</th>
-              <th>Jugador 1</th>
-              <th>Ganador</th>
-              <th>Jugador 2</th>
-            </tr>
-          </thead>
-          <tbody>
-         
-            <tr>
-              <td>Ronda 1</td>
-              <td>Alros</td>
-              <td>
-                <input type="checkbox" id="ronda1_Alros_vs_Lolo_Alros" />
-                <label for="ronda1_Alros_vs_Lolo_Alros"></label>
-                <input type="checkbox" id="ronda1_Alros_vs_Lolo_Lolo" />
-                <label for="ronda1_Alros_vs_Lolo_Lolo"></label>
-              </td>
-              <td>Lolo</td>
-            </tr>
-            <tr>
-              <td>Ronda 1</td>
-              <td>Tortopulus</td>
-              <td>
-                <input type="checkbox" id="ronda1_Tortopulus_vs_Sarten_Tortopulus" />
-                <label for="ronda1_Tortopulus_vs_Sarten_Tortopulus"></label>
-                <input type="checkbox" id="ronda1_Tortopulus_vs_Sarten_Sarten" />
-                <label for="ronda1_Tortopulus_vs_Sarten_Sarten"></label>
-              </td>
-              <td>Sarten</td>
-            </tr>
-            <tr>
-              <td>Ronda 1</td>
-              <td>Melkor</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda1/Melkor_vs_El Marqués', 'Melkor')">
-                <input type="checkbox" onclick="guardarResultado('ronda1/Melkor_vs_El Marqués', 'El Marqués')">
-              </td>
-              <td>El Marqués</td>
-            </tr>
-            <td>Ronda 1</td>
-            <td>Lvlaster</td>
-            <td>
-              <input type="checkbox" onclick="guardarResultado('ronda1/Lvlaster_vs_Nifunifaz', 'Lvlaster')">
-              <input type="checkbox" onclick="guardarResultado('ronda1/Lvlaster_vs_Nifunifaz', 'Nifunifaz')">
-            </td>
-            <td>Nifunifaz</td>
-            </tr>
-        
-            <tr>
-              <td>Ronda 2</td>
-              <td>Alros</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda2/Alros_vs_Tortopulus', 'Alros')">
-                <input type="checkbox" onclick="guardarResultado('ronda2/Alros_vs_Tortopulus', 'Tortopulus')">
-              </td>
-              <td>Tortopulus</td>
-            </tr>
-            <tr>
-              <td>Ronda 2</td>
-              <td>Lolo</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda2/Lolo_vs_Melkor', 'Lolo')">
-                <input type="checkbox" onclick="guardarResultado('ronda2/Lolo_vs_Melkor', 'Melkor')">
-              </td>
-              <td>Melkor</td>
-            </tr>
-            <tr>
-              <td>Ronda 2</td>
-              <td>Sarten</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda2/Sarten_vs_Lvlaster', 'Sarten')">
-                <input type="checkbox" onclick="guardarResultado('ronda2/Sarten_vs_Lvlaster', 'Lvlaster')">
-              </td>
-              <td>Lvlaster</td>
-            </tr>
-            <tr>
-              <td>Ronda 2</td>
-              <td>El Marqués</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda2/El Marqués_vs_Nifunifaz', 'El Marqués')">
-                <input type="checkbox" onclick="guardarResultado('ronda2/El Marqués_vs_Nifunifaz', 'Nifunifaz')">
-
-              </td>
-              <td>Nifunifaz</td>
-            </tr>
-
-   
-            <tr>
-              <td>Ronda 3</td>
-              <td>Alros</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda3/Alros_vs_Melkor', 'Alros')">
-                <input type="checkbox" onclick="guardarResultado('ronda3/Alros_vs_Melkor', 'Melkor')">
-              <td>Melkor</td>
-            </tr>
-            <tr>
-              <td>Ronda 3</td>
-              <td>Lolo</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda3/Lolo_vs_Sarten', 'Lolo')">
-                <input type="checkbox" onclick="guardarResultado('ronda3/Lolo_vs_Sarten', 'Sarten')">
-              </td>
-              <td>Sarten</td>
-            </tr>
-            <tr>
-              <td>Ronda 3</td>
-              <td>Tortopulus</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda3/Tortopulus_vs_El Marqués', 'Tortopulus')">
-                <input type="checkbox" onclick="guardarResultado('ronda3/Tortopulus_vs_El Marqués', 'El Marqués')">
-              </td>
-              <td>El Marqués</td>
-            </tr>
-            <tr>
-              <td>Ronda 3</td>
-              <td>Lvlaster</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda3/Lvlaster_vs_Nifunifaz', 'Lvlaster')">
-                <input type="checkbox" onclick="guardarResultado('ronda3/Lvlaster_vs_Nifunifaz', 'Nifunifaz')">
-              </td>
-              <td>ronda4</td>
-            </tr>
-   
-            <tr>
-              <td>Ronda 4</td>
-              <td>Alros</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda4/Alros_vs_Sarten', 'Alros')">
-                <input type="checkbox" onclick="guardarResultado('ronda4/Alros_vs_Sarten', 'Sarten')">
-              </td>
-              <td>Sarten</td>
-            </tr>
-            <tr>
-              <td>Ronda 4</td>
-              <td>Lolo</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda4/Lolo_vs_Nifunifaz', 'Lolo')">
-                <input type="checkbox" onclick="guardarResultado('ronda4/Lolo_vs_Nifunifaz', 'Nifunifaz')">
-              </td>
-              <td>Nifunifaz</td>
-            </tr>
-            <tr>
-              <td>Ronda 4</td>
-              <td>Tortopulus </td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda4/Tortopulus_vs_Lvlaster', 'Tortopulus')">
-                <input type="checkbox" onclick="guardarResultado('ronda4/Tortopulus_vs_Lvlaster', 'Lvlaster')">
-              </td>
-              <td>Lvlaster</td>
-            </tr>
-            <tr>
-              <td>Ronda 4</td>
-              <td>Melkor </td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda4/Melkor_vs_El Marqués', 'Melkor')">
-                <input type="checkbox" onclick="guardarResultado('ronda4/Melkor_vs_El Marqués', 'El Marqués')">
-              </td>
-              <td>El Marqués</td>
-            </tr>
-      
-            <tr>
-              <td>Ronda 5</td>
-              <td>Alros</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda5/Alros_vs_Nifunifaz', 'Alros')">
-                <input type="checkbox" onclick="guardarResultado('ronda5/Alros_vs_Nifunifaz', 'Nifunifaz')">
-              </td>
-              <td>Nifunifaz</td>
-            </tr>
-            <tr>
-              <td>Ronda 5</td>
-              <td>Lolo</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda5/Lolo_vs_El Marqués', 'Lolo')">
-                <input type="checkbox" onclick="guardarResultado('ronda5/Lolo_vs_El Marqués', 'El Marqués')">
-              </td>
-              <td>El Marqués</td>
-            </tr>
-            <tr>
-              <td>Ronda 5</td>
-              <td>Tortopulus</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda5/Tortopulus_vs_Melkor', 'Tortopulus')">
-                <input type="checkbox" onclick="guardarResultado('ronda5/Tortopulus_vs_Melkor', 'Melkor')">
-              </td>
-              <td>Melkor</td>
-            </tr>
-            <tr>
-              <td>Ronda 5</td>
-              <td>Sarten</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda5/Sarten_vs_Lvlaster', 'Sarten')">
-                <input type="checkbox" onclick="guardarResultado('ronda5/Sarten_vs_Lvlaster', 'Lvlaster')">
-              </td>
-              <td>Lvlaster</td>
-            </tr>
-  
-            <tr>
-              <td>Ronda 6</td>
-              <td>Alros</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda6/Alros_vs_Lvlaster', 'Alros')">
-                <input type="checkbox" onclick="guardarResultado('ronda6/Alros_vs_Lvlaster', 'Lvlaster')">
-              </td>
-              <td>Lvlaster</td>
-            </tr>
-            <tr>
-              <td>Ronda 6</td>
-              <td>Lolo</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda6/Lolo_vs_Tortopulus', 'Lolo')">
-                <input type="checkbox" onclick="guardarResultado('ronda6/Lolo_vs_Tortopulus', 'Tortopulus')">
-              </td>
-              <td>Tortopulus</td>
-            </tr>
-            <tr>
-              <td>Ronda 6</td>
-              <td>Sarten</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda6/Sarten_vs_Nifunifaz', 'Sarten')">
-                <input type="checkbox" onclick="guardarResultado('ronda6/Sarten_vs_Nifunifaz', 'Nifunifaz')">
-              </td>
-              <td>Nifunifaz</td>
-            </tr>
-            <tr>
-              <td>Ronda 6</td>
-              <td>Melkor</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda6/Melkor_vs_El Marqués', 'Melkor')">
-                <input type="checkbox" onclick="guardarResultado('ronda6/Melkor_vs_El Marqués', 'El Marqués')">
-              </td>
-              <td>El Marqués</td>
-            </tr>
-
-            <tr>
-              <td>Ronda 7</td>
-              <td>Alros</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda7/Alros_vs_El Marqués', 'Alros')">
-                <input type="checkbox" onclick="guardarResultado('ronda7/Alros_vs_El Marqués', 'El Marqués')">
-              </td>
-              <td>El Marqués</td>
-            </tr>
-            <tr>
-              <td>Ronda 7</td>
-              <td>Lolo</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda7/Lolo_vs_Sarten', 'Lolo')">
-                <input type="checkbox" onclick="guardarResultado('ronda7/Lolo_vs_Sarten', 'Sarten')">
-              </td>
-              <td>Sarten</td>
-            </tr>
-            <tr>
-              <td>Ronda 7</td>
-              <td>Tortopulus</td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda7/Tortopulus_vs_Nifunifaz', 'Tortopulus')">
-                <input type="checkbox" onclick="guardarResultado('ronda7/Tortopulus_vs_Nifunifaz', 'Nifunifaz')">
-              </td>
-              <td>Nifunifaz</td>
-            </tr>
-            <tr>
-              <td>Ronda 7</td>
-              <td>Melkor </td>
-              <td>
-                <input type="checkbox" onclick="guardarResultado('ronda7/Melkor_vs_Lvlaster', 'Melkor')">
-                <input type="checkbox" onclick="guardarResultado('ronda7/Melkor_vs_Lvlaster', 'Lvlaster')">
-              </td>
-              <td>Lvlaster</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section> -->
