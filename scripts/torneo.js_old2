@@ -23,29 +23,29 @@ function prepararDatos(jsonData) {
 
   // Extraer jugadores únicos
   const equiposUnicos = new Set();
-  jsonData.rounds.forEach((round) => {
-    round.matches.forEach((match) => {
+  jsonData.rounds.forEach(round => {
+    round.matches.forEach(match => {
       equiposUnicos.add(match.home_team);
       equiposUnicos.add(match.away_team);
     });
   });
 
   // Inicializar jugadores con 0 puntos
-  equiposUnicos.forEach((equipo) => {
+  equiposUnicos.forEach(equipo => {
     jugadores[equipo] = { puntos: 0 };
   });
 
   // Preparar estructura de partidas
-  jsonData.rounds.forEach((round) => {
+  jsonData.rounds.forEach(round => {
     const rondaKey = `Ronda ${round.Ronda}`;
     partidas[rondaKey] = {};
 
-    round.matches.forEach((match) => {
+    round.matches.forEach(match => {
       const partidaKey = `${match.home_team}_vs_${match.away_team}`;
       partidas[rondaKey][partidaKey] = {
         fecha: match.date,
         lugar: match.venue,
-        ganador: "",
+        ganador: ""
       };
     });
   });
@@ -64,7 +64,7 @@ async function cargarDatos() {
       const jsonData = await response.json();
       torneoData = prepararDatos(jsonData);
     }
-
+    
     actualizarClasificacion();
     actualizarFixture();
   } catch (error) {
@@ -107,12 +107,18 @@ function actualizarFixture() {
         <td>${jugador1}</td>
         <td class="ganador-col">
           <div class="checkbox-group">    
-            <input type="checkbox" class="cb" name="${ronda}" onchange="cbChange(this, '${partida}', '${jugador1}')">
+            <label class="custom-checkbox">
+              <input type="checkbox" onchange="actualizarResultado('${ronda}', '${partida}', '${jugador1}', this.checked)">
+              <span class="checkmark"></span>
+            </label>
           </div>
         </td>
         <td class="ganador-col2">
           <div class="checkbox-group">
-            <input type="checkbox" class="cb" name="${ronda}" onchange="cbChange(this, '${partida}', '${jugador2}')">
+            <label class="custom-checkbox">
+              <input type="checkbox" onchange="actualizarResultado('${ronda}', '${partida}', '${jugador2}', this.checked)">
+              <span class="checkmark"></span>
+            </label>
           </div>
         </td>
         <td>${jugador2}</td>
@@ -123,39 +129,30 @@ function actualizarFixture() {
 }
 
 // Actualizar resultado de una partida
-// Actualizar resultado de una partida
-function cbChange(obj, partida, ganador) {
-  const [ronda] = Object.entries(torneoData.partidas).find(([, matches]) =>
-    Object.keys(matches).includes(partida)
-  );
-
-  // Identificar al perdedor
+function actualizarResultado(ronda, partida, ganador, checked) {
   const [jugador1, jugador2] = partida.split("_vs_");
   const perdedor = jugador1 === ganador ? jugador2 : jugador1;
 
-  // Actualizar puntos según el estado del checkbox
-  if (obj.checked) {
-    // Sumar 3 puntos al ganador
+  // Actualizar puntos
+  if (checked) {
+    // Desmarcar otros checkboxes en la misma partida
+    const checkboxes = document.querySelectorAll(
+      `input[type="checkbox"][onchange^="actualizarResultado('${ronda}', '${partida}')"]`
+    );
+    checkboxes.forEach((cb) => {
+      if (cb.parentElement.parentElement !== event.target.parentElement.parentElement) {
+        cb.checked = false;
+      }
+    });
+
     torneoData.jugadores[ganador].puntos += 3;
     torneoData.partidas[ronda][partida].ganador = ganador;
-    document.querySelector(
-      `input.cb[onchange="cbChange(this, '${partida}', '${perdedor}')"]`
-    ).disabled = true;
   } else {
-    // Restar 3 puntos si se desmarca
     torneoData.jugadores[ganador].puntos -= 3;
-    torneoData.partidas[ronda][partida].ganador = ""; // Limpiar el ganador si se desmarca
-
-    // Habilitar el checkbox del perdedor
-    document.querySelector(
-      `input.cb[onchange="cbChange(this, '${partida}', '${perdedor}')"]`
-    ).disabled = false;
+    torneoData.partidas[ronda][partida].ganador = "";
   }
 
-  // Actualizar la tabla de clasificación
   actualizarClasificacion();
-
-  // Guardar el estado actualizado en localStorage
   guardarDatosLocalStorage();
 }
 

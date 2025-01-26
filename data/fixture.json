@@ -1,0 +1,43 @@
+{
+  "tournament": "Torneo Round Robin",
+  "total_teams": 3,
+  "start_date": "24-01-2025",
+  "rounds": [
+    {
+      "Ronda": 1,
+      "matches": [
+        {
+          "round": 1,
+          "home_team": "tortu",
+          "away_team": "sarten",
+          "date": "24-01-2025",
+          "venue": "Estadio tortu"
+        }
+      ]
+    },
+    {
+      "Ronda": 2,
+      "matches": [
+        {
+          "round": 2,
+          "home_team": "ale",
+          "away_team": "sarten",
+          "date": "31-01-2025",
+          "venue": "Estadio ale"
+        }
+      ]
+    },
+    {
+      "Ronda": 3,
+      "matches": [
+        {
+          "round": 3,
+          "home_team": "ale",
+          "away_team": "tortu",
+          "date": "07-02-2025",
+          "venue": "Estadio ale"
+        }
+      ]
+    }
+  ]
+}
