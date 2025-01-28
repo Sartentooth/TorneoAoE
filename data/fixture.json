@@ -1,17 +1,38 @@
 {
   "tournament": "Torneo Round Robin",
-  "total_teams": 3,
-  "start_date": "24-01-2025",
+  "total_teams": 9,
+  "start_date": "27-01-2025",
   "rounds": [
     {
       "Ronda": 1,
       "matches": [
         {
           "round": 1,
-          "home_team": "tortu",
-          "away_team": "sarten",
-          "date": "24-01-2025",
-          "venue": "Estadio tortu"
+          "home_team": "Tortu",
+          "away_team": "Kofee",
+          "date": "27-01-2025",
+          "venue": "Estadio Tortu"
+        },
+        {
+          "round": 1,
+          "home_team": "Ale",
+          "away_team": "Alfred",
+          "date": "27-01-2025",
+          "venue": "Estadio Ale"
+        },
+        {
+          "round": 1,
+          "home_team": "Patyño",
+          "away_team": "Carlos",
+          "date": "27-01-2025",
+          "venue": "Estadio Patyño"
+        },
+        {
+          "round": 1,
+          "home_team": "Sebas",
+          "away_team": "Lolo",
+          "date": "27-01-2025",
+          "venue": "Estadio Sebas"
         }
       ]
     },
@@ -20,10 +41,31 @@
       "matches": [
         {
           "round": 2,
-          "home_team": "ale",
-          "away_team": "sarten",
-          "date": "31-01-2025",
-          "venue": "Estadio ale"
+          "home_team": "Nico",
+          "away_team": "Kofee",
+          "date": "03-02-2025",
+          "venue": "Estadio Nico"
+        },
+        {
+          "round": 2,
+          "home_team": "Tortu",
+          "away_team": "Carlos",
+          "date": "03-02-2025",
+          "venue": "Estadio Tortu"
+        },
+        {
+          "round": 2,
+          "home_team": "Ale",
+          "away_team": "Lolo",
+          "date": "03-02-2025",
+          "venue": "Estadio Ale"
+        },
+        {
+          "round": 2,
+          "home_team": "Patyño",
+          "away_team": "Sebas",
+          "date": "03-02-2025",
+          "venue": "Estadio Patyño"
         }
       ]
     },
@@ -32,10 +74,229 @@
       "matches": [
         {
           "round": 3,
-          "home_team": "ale",
-          "away_team": "tortu",
-          "date": "07-02-2025",
-          "venue": "Estadio ale"
+          "home_team": "Nico",
+          "away_team": "Alfred",
+          "date": "10-02-2025",
+          "venue": "Estadio Nico"
+        },
+        {
+          "round": 3,
+          "home_team": "Kofee",
+          "away_team": "Carlos",
+          "date": "10-02-2025",
+          "venue": "Estadio Kofee"
+        },
+        {
+          "round": 3,
+          "home_team": "Tortu",
+          "away_team": "Sebas",
+          "date": "10-02-2025",
+          "venue": "Estadio Tortu"
+        },
+        {
+          "round": 3,
+          "home_team": "Ale",
+          "away_team": "Patyño",
+          "date": "10-02-2025",
+          "venue": "Estadio Ale"
+        }
+      ]
+    },
+    {
+      "Ronda": 4,
+      "matches": [
+        {
+          "round": 4,
+          "home_team": "Nico",
+          "away_team": "Carlos",
+          "date": "17-02-2025",
+          "venue": "Estadio Nico"
+        },
+        {
+          "round": 4,
+          "home_team": "Alfred",
+          "away_team": "Lolo",
+          "date": "17-02-2025",
+          "venue": "Estadio Alfred"
+        },
+        {
+          "round": 4,
+          "home_team": "Kofee",
+          "away_team": "Sebas",
+          "date": "17-02-2025",
+          "venue": "Estadio Kofee"
+        },
+        {
+          "round": 4,
+          "home_team": "Tortu",
+          "away_team": "Ale",
+          "date": "17-02-2025",
+          "venue": "Estadio Tortu"
+        }
+      ]
+    },
+    {
+      "Ronda": 5,
+      "matches": [
+        {
+          "round": 5,
+          "home_team": "Nico",
+          "away_team": "Lolo",
+          "date": "24-02-2025",
+          "venue": "Estadio Nico"
+        },
+        {
+          "round": 5,
+          "home_team": "Carlos",
+          "away_team": "Sebas",
+          "date": "24-02-2025",
+          "venue": "Estadio Carlos"
+        },
+        {
+          "round": 5,
+          "home_team": "Alfred",
+          "away_team": "Patyño",
+          "date": "24-02-2025",
+          "venue": "Estadio Alfred"
+        },
+        {
+          "round": 5,
+          "home_team": "Kofee",
+          "away_team": "Ale",
+          "date": "24-02-2025",
+          "venue": "Estadio Kofee"
+        }
+      ]
+    },
+    {
+      "Ronda": 6,
+      "matches": [
+        {
+          "round": 6,
+          "home_team": "Nico",
+          "away_team": "Sebas",
+          "date": "03-03-2025",
+          "venue": "Estadio Nico"
+        },
+        {
+          "round": 6,
+          "home_team": "Lolo",
+          "away_team": "Patyño",
+          "date": "03-03-2025",
+          "venue": "Estadio Lolo"
+        },
+        {
+          "round": 6,
+          "home_team": "Carlos",
+          "away_team": "Ale",
+          "date": "03-03-2025",
+          "venue": "Estadio Carlos"
+        },
+        {
+          "round": 6,
+          "home_team": "Alfred",
+          "away_team": "Tortu",
+          "date": "03-03-2025",
+          "venue": "Estadio Alfred"
+        }
+      ]
+    },
+    {
+      "Ronda": 7,
+      "matches": [
+        {
+          "round": 7,
+          "home_team": "Nico",
+          "away_team": "Patyño",
+          "date": "10-03-2025",
+          "venue": "Estadio Nico"
+        },
+        {
+          "round": 7,
+          "home_team": "Sebas",
+          "away_team": "Ale",
+          "date": "10-03-2025",
+          "venue": "Estadio Sebas"
+        },
+        {
+          "round": 7,
+          "home_team": "Lolo",
+          "away_team": "Tortu",
+          "date": "10-03-2025",
+          "venue": "Estadio Lolo"
+        },
+        {
+          "round": 7,
+          "home_team": "Alfred",
+          "away_team": "Kofee",
+          "date": "10-03-2025",
+          "venue": "Estadio Alfred"
+        }
+      ]
+    },
+    {
+      "Ronda": 8,
+      "matches": [
+        {
+          "round": 8,
+          "home_team": "Nico",
+          "away_team": "Ale",
+          "date": "17-03-2025",
+          "venue": "Estadio Nico"
+        },
+        {
+          "round": 8,
+          "home_team": "Patyño",
+          "away_team": "Tortu",
+          "date": "17-03-2025",
+          "venue": "Estadio Patyño"
+        },
+        {
+          "round": 8,
+          "home_team": "Lolo",
+          "away_team": "Kofee",
+          "date": "17-03-2025",
+          "venue": "Estadio Lolo"
+        },
+        {
+          "round": 8,
+          "home_team": "Carlos",
+          "away_team": "Alfred",
+          "date": "17-03-2025",
+          "venue": "Estadio Carlos"
+        }
+      ]
+    },
+    {
+      "Ronda": 9,
+      "matches": [
+        {
+          "round": 9,
+          "home_team": "Nico",
+          "away_team": "Tortu",
+          "date": "24-03-2025",
+          "venue": "Estadio Nico"
+        },
+        {
+          "round": 9,
+          "home_team": "Patyño",
+          "away_team": "Kofee",
+          "date": "24-03-2025",
+          "venue": "Estadio Patyño"
+        },
+        {
+          "round": 9,
+          "home_team": "Sebas",
+          "away_team": "Alfred",
+          "date": "24-03-2025",
+          "venue": "Estadio Sebas"
+        },
+        {
+          "round": 9,
+          "home_team": "Lolo",
+          "away_team": "Carlos",
+          "date": "24-03-2025",
+          "venue": "Estadio Lolo"
         }
       ]
     }
