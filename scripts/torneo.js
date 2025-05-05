@@ -123,7 +123,6 @@ function actualizarFixture() {
 }
 
 // Actualizar resultado de una partida
-// Actualizar resultado de una partida
 function cbChange(obj, partida, ganador) {
   const [ronda] = Object.entries(torneoData.partidas).find(([, matches]) =>
     Object.keys(matches).includes(partida)
