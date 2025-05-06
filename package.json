@@ -2,7 +2,7 @@
   "name": "torneoaoe",
   "version": "1.0.0",
   "description": "Este proyecto contiene el fixture y el sistema de puntajes para un torneo de Age of Empires 2: Definitive Edition en formato **Round Robin**. El fixture está diseñado para 8 jugadores, con un sistema de puntos basado en conquistas, donde cada victoria otorga 3 puntos.",
-  "main": "index.js",
+  "main": "torneo.js",
   "scripts": {
     "lint": "eslint --config ./config/eslint.config.mjs .",
     "format": "prettier --write .",

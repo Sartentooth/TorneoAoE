@@ -1,4 +1,3 @@
-require("dotenv").config();
 // Variable global para almacenar los datos del torneo
 let torneoData;
 const db = "data/fixture.json";
