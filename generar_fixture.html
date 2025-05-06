@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de Fixture</title>
+    <link rel="stylesheet" href="styles/torneo-styles.css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <h1>Generador de Fixture</h1>
+
+      <div class="formulario">
+        <label for="jugadores">Ingresá los jugadores (uno por línea):</label>
+        <textarea
+          id="jugadores"
+          rows="10"
+          placeholder="Ej: Juan\nPedro\nAna"
+        ></textarea>
+        <button id="agregarJugadores">Agregar Jugadores</button>
+      </div>
+
+      <div class="lista-jugadores">
+        <h2>Jugadores ingresados</h2>
+        <ul id="listaJugadores"></ul>
+      </div>
+
+      <button id="generarFixture">Generar Fixture</button>
+
+      <div class="preview">
+        <h2>Fixture generado</h2>
+        <div class="tabs">
+          <button id="verJSON">Ver JSON</button>
+          <button id="verTabla">Ver como tabla</button>
+        </div>
+        <pre id="jsonPreview" class="preview-box"></pre>
+        <div id="tablaPreview" class="preview-box" style="display: none"></div>
+        <button id="descargarJSON">Descargar JSON</button>
+      </div>
+    </div>
+
+    <script src="scripts/generadorFixture.js" defer></script>
+  </body>
+</html>
