@@ -1,0 +1,16 @@
+# Dependencias de Node.js
+node_modules/
+npm-debug.log
+
+# Archivos de configuración local
+.env
+
+# Configuraciones de VS Code
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

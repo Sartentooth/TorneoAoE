@@ -1,0 +1,25 @@
+{
+  "name": "torneoaoe",
+  "version": "1.0.0",
+  "description": "Este proyecto contiene el fixture y el sistema de puntajes para un torneo de Age of Empires 2: Definitive Edition en formato **Round Robin**. El fixture está diseñado para 8 jugadores, con un sistema de puntos basado en conquistas, donde cada victoria otorga 3 puntos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sartentooth/TorneoAoE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sartentooth/TorneoAoE/issues"
+  },
+  "homepage": "https://github.com/Sartentooth/TorneoAoE#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "eslint": "^9.26.0",
+    "globals": "^16.0.0"
+  }
+}
