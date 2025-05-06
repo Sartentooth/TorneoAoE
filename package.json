@@ -4,8 +4,9 @@
   "description": "Este proyecto contiene el fixture y el sistema de puntajes para un torneo de Age of Empires 2: Definitive Edition en formato **Round Robin**. El fixture está diseñado para 8 jugadores, con un sistema de puntos basado en conquistas, donde cada victoria otorga 3 puntos.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
+    "lint": "eslint --config ./config/eslint.config.mjs .",
+    "format": "prettier --write .",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,13 @@
   "devDependencies": {
     "@eslint/js": "^9.26.0",
     "eslint": "^9.26.0",
-    "globals": "^16.0.0"
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.4.0",
+    "globals": "^16.0.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
   }
 }
