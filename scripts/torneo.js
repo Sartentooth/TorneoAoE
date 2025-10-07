@@ -79,7 +79,7 @@ function actualizarClasificacion() {
 
   // Ordenar jugadores por puntos
   const jugadoresOrdenados = Object.entries(torneoData.jugadores).sort(
-    (a, b) => b[1].puntos - a[1].puntos
+    (a, b) => b[1].puntos - a[1].puntos,
   );
 
   jugadoresOrdenados.forEach((jugador, index) => {
@@ -125,7 +125,7 @@ function actualizarFixture() {
 // Actualizar resultado de una partida
 function cbChange(obj, partida, ganador) {
   const [ronda] = Object.entries(torneoData.partidas).find(([, matches]) =>
-    Object.keys(matches).includes(partida)
+    Object.keys(matches).includes(partida),
   );
 
   // Identificar al perdedor
@@ -138,7 +138,7 @@ function cbChange(obj, partida, ganador) {
     torneoData.jugadores[ganador].puntos += 3;
     torneoData.partidas[ronda][partida].ganador = ganador;
     document.querySelector(
-      `input.cb[onchange="cbChange(this, '${partida}', '${perdedor}')"]`
+      `input.cb[onchange="cbChange(this, '${partida}', '${perdedor}')"]`,
     ).disabled = true;
   } else {
     // Restar 3 puntos si se desmarca
@@ -147,7 +147,7 @@ function cbChange(obj, partida, ganador) {
 
     // Habilitar el checkbox del perdedor
     document.querySelector(
-      `input.cb[onchange="cbChange(this, '${partida}', '${perdedor}')"]`
+      `input.cb[onchange="cbChange(this, '${partida}', '${perdedor}')"]`,
     ).disabled = false;
   }
 

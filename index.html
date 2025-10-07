@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Torneo Age of Empires 2 - Definitive Edition</title>
-    <link rel="stylesheet" href="styles/torneo-styles.css">
+    <link rel="stylesheet" href="styles/torneo-styles.css" />
     <script src="scripts/torneo.js" defer></script>
     <script src="scripts/cleanLocalStorage.js" defer></script>
   </head>
@@ -19,12 +18,13 @@
     <section class="rules">
       <h2>Reglas del Torneo</h2>
       <ul>
-        <li><strong>Tipo de Torneo:</strong> Todos contra todos </li>
-        <li><strong>Modo de Juego:</strong> Combate Total </li>
-        <li><strong>Condición de victoria:</strong> Conquista </li>
-        <li><strong>Límite de tiempo:</strong> Sin Límite </li>
-        <li><strong>Mapa:</strong> Elige jugador Local </li>
-        <li><strong>Puntuación:</strong>
+        <li><strong>Tipo de Torneo:</strong> Todos contra todos</li>
+        <li><strong>Modo de Juego:</strong> Combate Total</li>
+        <li><strong>Condición de victoria:</strong> Conquista</li>
+        <li><strong>Límite de tiempo:</strong> Sin Límite</li>
+        <li><strong>Mapa:</strong> Elige jugador Local</li>
+        <li>
+          <strong>Puntuación:</strong>
           <ul>
             <li>Victoria: 3 puntos</li>
             <li>Derrota: 0 puntos</li>
@@ -51,7 +51,14 @@
     </section>
 
     <div class="contenedor">
-      <button class="cleanAll" type="button" onclick="cleanLocalStorage()" aria-label="Limpiar localStorage">🧹</button>
+      <button
+        class="cleanAll"
+        type="button"
+        onclick="cleanLocalStorage()"
+        aria-label="Limpiar localStorage"
+      >
+        🧹
+      </button>
     </div>
 
     <!-- Sección de fixture -->
@@ -74,5 +81,4 @@
 
     <div id="mensaje"></div>
   </body>
-
 </html>

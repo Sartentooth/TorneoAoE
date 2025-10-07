@@ -1,197 +1,214 @@
 /* Estilos generales */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
 }
 
 h1,
 h2 {
-    color: #2c3e50;
-    margin-top: 30px;
+  color: #2c3e50;
+  margin-top: 30px;
 }
 
 /* Estilos para las secciones */
 section {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
 }
 
 /* Estilos para las tablas */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 th,
 td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #e0e0e0;
-    border-collapse: collapse;
-    width: 100px;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  border-collapse: collapse;
+  width: 100px;
 }
 
 th {
-    background-color: #3498db;
-    color: white;
-    font-weight: bold;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 /* Estilos para los checkboxes y labels */
 input[type="checkbox"] {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 label {
-    margin-right: 15px;
-    cursor: pointer;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
 /* Estilos para el mensaje de feedback */
 #mensaje {
-    background-color: #2ecc71;
-    color: white;
-    padding: 10px;
-    border-radius: 4px;
-    margin-top: 20px;
-    text-align: center;
-    display: none;
-    /* Se mostrará con JavaScript cuando sea necesario */
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 20px;
+  text-align: center;
+  display: none;
+  /* Se mostrará con JavaScript cuando sea necesario */
 }
 
 /* Estilos para la sección de reglas con logo */
 .rules {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.276)40%), url('https://raw.githubusercontent.com/Sartentooth/TorneoAoE/main/images/logo.jpg');
-    background-size: cover;
-    background-position: right center;
-    background-repeat: no-repeat;
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.9) 20%,
+      rgba(255, 255, 255, 0.276) 40%
+    ),
+    url("https://raw.githubusercontent.com/Sartentooth/TorneoAoE/main/images/logo.jpg");
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
 }
 
 .rules::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 30%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9));
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.9)
+  );
 }
 
 .rules h2,
 .rules p,
 .rules ul {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 /* Centrar los checkboxes en la columna Ganador */
 th.ganador-col {
-    text-align: center;
-    /* Centra horizontalmente */
-    vertical-align: middle;
-    /* Centra verticalmente */
-    padding-right: 15%;
+  text-align: center;
+  /* Centra horizontalmente */
+  vertical-align: middle;
+  /* Centra verticalmente */
+  padding-right: 15%;
 }
 
 /* Agrupar los checkboxes y ajustar el espacio entre ellos */
 .checkbox-group {
-    display: inline-flex;
-    justify-content: center;
-    /* Centra el grupo de checkboxes */
-    gap: 8px;
-    /* Ajusta la separación entre los checkboxes */
+  display: inline-flex;
+  justify-content: center;
+  /* Centra el grupo de checkboxes */
+  gap: 8px;
+  /* Ajusta la separación entre los checkboxes */
 }
 
 /* Ajustar el tamaño del checkbox si es necesario */
 input[type="checkbox"] {
-    width: 18px;
-    /* Cambia el ancho del checkbox */
-    height: 18px;
-    /* Cambia la altura del checkbox */
-    margin-right: 0;
-    /* Elimina el margen derecho ya que usamos flexbox */
+  width: 18px;
+  /* Cambia el ancho del checkbox */
+  height: 18px;
+  /* Cambia la altura del checkbox */
+  margin-right: 0;
+  /* Elimina el margen derecho ya que usamos flexbox */
 }
-
 
 /* Estilos específicos para la clasificación */
 .ranking table {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 .ranking th,
 .ranking td {
-    text-align: center;
+  text-align: center;
 }
 
 .contenedor {
-    display: block;
-    text-align: center;
-    margin-bottom: 30px;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .cleanAll {
-    width: 100px;
-    height: 30px;
-    font-size: large;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100px;
+  height: 30px;
+  font-size: large;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Media Query */
 @media (max-width: 768px) {
-    .fixture {
-        display: none;
-        /* Oculta la tabla de rondas */
-    }
+  .fixture {
+    display: none;
+    /* Oculta la tabla de rondas */
+  }
 
-    .clasificacion {
-        display: block;
-        /* Asegura que la tabla de clasificación se muestre */
-    }
+  .clasificacion {
+    display: block;
+    /* Asegura que la tabla de clasificación se muestre */
+  }
 
-    .clasificacion tr {
-        display: flex;
-        /* Cambia a flex para que se vean en una lista */
-        justify-content: space-between;
-        /* Espaciado entre nombre y puntaje */
-    }
+  .clasificacion tr {
+    display: flex;
+    /* Cambia a flex para que se vean en una lista */
+    justify-content: space-between;
+    /* Espaciado entre nombre y puntaje */
+  }
 
-    .clasificacion th,
-    .clasificacion td {
-        flex: 1;
-        /* Permite que cada celda ocupe el mismo espacio */
-        text-align: left;
-        /* Alinea el texto a la izquierda */
-    }
+  .clasificacion th,
+  .clasificacion td {
+    flex: 1;
+    /* Permite que cada celda ocupe el mismo espacio */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+  }
 
-    /* Opcional: Estilos adicionales para mejor visualización */
-    .clasificacion th {
-        display: none;
-        /* Oculta los encabezados en móvil */
-    }
+  /* Opcional: Estilos adicionales para mejor visualización */
+  .clasificacion th {
+    display: none;
+    /* Oculta los encabezados en móvil */
+  }
 
-    .clasificacion tr {
-        margin-bottom: 10px;
-        /* Espacio entre filas */
-    }
+  .clasificacion tr {
+    margin-bottom: 10px;
+    /* Espacio entre filas */
+  }
 
-    .rules {
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.751)40%), url('https://raw.githubusercontent.com/Sartentooth/TorneoAoE/main/images/logo.jpg');
+  .rules {
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.9) 20%,
+        rgba(255, 255, 255, 0.751) 40%
+      ),
+      url("https://raw.githubusercontent.com/Sartentooth/TorneoAoE/main/images/logo.jpg");
+  }
+  /* estilos animacion mensaje alerta css*/
 
-    }
+  
 }
