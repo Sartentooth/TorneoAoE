@@ -1,0 +1,102 @@
+{
+  "tournament": "Torneo Round Robin",
+  "total_teams": 5,
+  "start_date": "05-05-2025",
+  "rounds": [
+    {
+      "Ronda": 1,
+      "matches": [
+        {
+          "round": 1,
+          "home_team": "Sebas - Nico",
+          "away_team": "SpepQR - Ulefantes",
+          "date": "05-05-2025",
+          "venue": "Estadio Sebas - Nico"
+        },
+        {
+          "round": 1,
+          "home_team": "Kofee - Tortu",
+          "away_team": "Lolo - Ale",
+          "date": "05-05-2025",
+          "venue": "Estadio Kofee - Tortu"
+        }
+      ]
+    },
+    {
+      "Ronda": 2,
+      "matches": [
+        {
+          "round": 2,
+          "home_team": "Carlos - Diegp",
+          "away_team": "SpepQR - Ulefantes",
+          "date": "12-05-2025",
+          "venue": "Estadio Carlos - Diegp"
+        },
+        {
+          "round": 2,
+          "home_team": "Sebas - Nico",
+          "away_team": "Kofee - Tortu",
+          "date": "12-05-2025",
+          "venue": "Estadio Sebas - Nico"
+        }
+      ]
+    },
+    {
+      "Ronda": 3,
+      "matches": [
+        {
+          "round": 3,
+          "home_team": "Carlos - Diegp",
+          "away_team": "Lolo - Ale",
+          "date": "19-05-2025",
+          "venue": "Estadio Carlos - Diegp"
+        },
+        {
+          "round": 3,
+          "home_team": "SpepQR - Ulefantes",
+          "away_team": "Kofee - Tortu",
+          "date": "19-05-2025",
+          "venue": "Estadio SpepQR - Ulefantes"
+        }
+      ]
+    },
+    {
+      "Ronda": 4,
+      "matches": [
+        {
+          "round": 4,
+          "home_team": "Carlos - Diegp",
+          "away_team": "Kofee - Tortu",
+          "date": "26-05-2025",
+          "venue": "Estadio Carlos - Diegp"
+        },
+        {
+          "round": 4,
+          "home_team": "Lolo - Ale",
+          "away_team": "Sebas - Nico",
+          "date": "26-05-2025",
+          "venue": "Estadio Lolo - Ale"
+        }
+      ]
+    },
+    {
+      "Ronda": 5,
+      "matches": [
+        {
+          "round": 5,
+          "home_team": "Carlos - Diegp",
+          "away_team": "Sebas - Nico",
+          "date": "02-06-2025",
+          "venue": "Estadio Carlos - Diegp"
+        },
+        {
+          "round": 5,
+          "home_team": "Lolo - Ale",
+          "away_team": "SpepQR - Ulefantes",
+          "date": "02-06-2025",
+          "venue": "Estadio Lolo - Ale"
+        }
+      ]
+    }
+  ]
+}
